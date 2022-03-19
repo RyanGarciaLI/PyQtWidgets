@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+# 
+# Copyright (C) RyanGarciaLI
+
+""" This is a custom tag bar.
+
+This tag bar receive user input from a line edit and show them in terms of tags. Tag names can be preset and
+auto-filled in the line edit. Every tag can be deleted by clicking the X button on it. The tag bar can expand
+if too many tags are created.
+"""
+
 import sys
 from functools import partial
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QFrame, QHBoxLayout, QLineEdit, QSizePolicy, QSpacerItem, QLabel,
@@ -5,6 +16,11 @@ from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QFrame, QHBoxLayout, QLineEdi
 from PyQt5.QtCore import QStringListModel, Qt
 
 class QTagBar(QWidget):
+    """ A tag bar with input area.
+
+    A tag bar consists of a frame and a line edit in vertical. The frame contains all created tags in horizontal. Each
+    tag has a text label and a push button with a red text "X" within a frame. 
+    """
 
     def __init__(self):
         super(QTagBar, self).__init__()
