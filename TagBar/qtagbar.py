@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 # 
-# Copyright (C) RyanGarciaLI
+# Copyright (C) 20222 RyanGarciaLI. All rights reserved.
+#
+# Created on March 13, 20222s
+#
+# @author: Ryan Garcia LI
 
 """ This is a custom tag bar.
 
@@ -22,8 +26,8 @@ class QTagBar(QWidget):
     tag has a text label and a push button with a red text "X" within a frame. 
     """
 
-    def __init__(self):
-        super(QTagBar, self).__init__()
+    def __init__(self, parent=None):
+        super(QTagBar, self).__init__(parent)
         self.setWindowTitle('Tag Bar')
         self.tags = []
         self.vbox = QVBoxLayout()
